@@ -1,0 +1,149 @@
+* {
+	box-sizing:border-box;
+}
+
+.clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+
+body {
+    font-family: 'Open-sans', sans-serif;
+    font-size: 62.5%; 
+    /* pour reinitialiser font a 10px */
+    background-color: #f2f1f4; 
+}
+
+nav {
+    font-family: 'Open sans', sans-serif;
+    text-align: center;
+    background-color: #f2f1f4;
+}
+
+header nav ul {
+    font-size: 0;
+    background-color: #30a894;
+}
+
+header nav ul li {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+@media all and (min-width: 560px){
+    header nav ul li {
+        display: inline-block;
+/*      background-color: red;*/
+    }
+}
+
+
+header nav ul li a {
+    display: inline-block;
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+h1{
+    background-color: #30A894;
+    display: block;
+    padding: 10px;
+    color: #fff;
+    font-family: 'PT Sans Narrow';
+    margin: 30px 0;
+    font-size: 1.2rem;
+}
+
+main section {
+    width: 100%;
+    margin: auto;
+    padding: 15px;
+}
+
+main section img {
+    max-width: 100%;
+    height: auto;
+}
+
+section p {
+    color:  #6a6d70;
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+main aside {
+    padding: 30px;
+    background-color: #b8dcb1;
+    display: none;
+}
+
+@media all and (min-width: 560px){
+    main aside {
+        display: block;
+    }
+}
+
+@media all and (min-width: 960px){
+    nav a img {
+        animation: MonAnimImg2;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        /*animation: MonAnimImg 2s linear 1 0s;*/
+    }
+    main, header {
+        max-width: 80%;
+        margin: auto;
+    }
+    main section {
+        float: left;
+        width: 70%;
+        vertical-align: top;
+        padding: 0 15px 15px 0;
+    }
+    main aside {
+        float: right;
+        width: 29%;
+    }
+}
+
+main aside h2 {
+    background-color: #30A894;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-family: 'PT Sans Narrow'
+}
+
+main aside p {
+    padding: 15px 0;
+    text-align: justify;
+    color: #395b43;
+}
+
+@keyframes MonAnimImg {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes MonAnimImg2 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100%{
+        1;
+    }
+}
